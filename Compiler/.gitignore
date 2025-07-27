@@ -1,38 +1,14 @@
-
-# 1. Node.js artefacts
-node_modules/           # installed deps
-npm-debug.log*          # npm / pnpm debug logs
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
+node_modules/
+.env
 
 
-# 2. Runtime / build output
-dist/                   # if you ever transpile/bundle
-build/
-coverage/               # nyc / jest coverage
-*.tgz                   # npm pack files
-
-# 3. Sandbox & temp execution files
-#    (only relevant during local dev;
-#     your service writes these to /tmp in prod)
-tmp/
-temp/
-sandbox/
-executables/
-*.out                   # gcc / g++ output
-*.o
-*.class                 # Java byte-code
-*.exe
-*.pyc
-
-# 4. Environment / secrets
-.env*
-!.env.example           # keep a sample template
-
-
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
 .DS_Store
-Thumbs.db
-.idea/
-.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
 *.sw?
