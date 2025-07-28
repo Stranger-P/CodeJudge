@@ -25,7 +25,8 @@ const signup = async (req, res) => {
     const token = generateToken(user._id, user.role);
     res.cookie('token', token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
+      sameSite: 'None', 
+      secure  : true
       maxAge: 24*360000, 
       path: '/',
     });
@@ -60,7 +61,8 @@ const login = async (req, res) => {
     // Set cookie
     res.cookie('token', token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
+      sameSite: 'None', 
+      secure  : true
       maxAge: 24*3600000, 
       path: '/',
     });
@@ -94,7 +96,8 @@ const googleCallback = async (req, res) => {
     const token = generateToken(user._id, user.role);
     res.cookie('token', token, {   
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
+      sameSite: 'None', 
+      secure  : true
       maxAge: 24*3600000,
       path: '/',
     });
